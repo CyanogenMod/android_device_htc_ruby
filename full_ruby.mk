@@ -8,5 +8,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # The rest of the configuration is inherited from a generic config
 $(call inherit-product, device/htc/ruby/ruby.mk)
 
-
-
+PRODUCT_NAME := full_ruby
+PRODUCT_DEVICE := ruby
+PRODUCT_MODEL := Full Android on Ruby
