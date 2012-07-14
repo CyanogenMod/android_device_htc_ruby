@@ -27,6 +27,8 @@ BOARD_HAVE_NFC := true
 BOARD_HAS_SCREEN_OFF_FLICKER := true
 BOARD_USE_SKIA_LCDTEXT := true
 
+TARGET_PROVIDES_LIBLIGHTS := true
+
 #BOARD_PROVIDES_LIBRIL := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.hardware=ruby
