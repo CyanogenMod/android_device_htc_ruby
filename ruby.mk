@@ -17,8 +17,6 @@
 DEVICE_PACKAGE_OVERLAYS += device/htc/ruby/overlay
 PRODUCT_LOCALES += en
 
-# First, the most specific values
-
 # Dalvik
 include frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk
 
