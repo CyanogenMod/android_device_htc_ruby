@@ -29,7 +29,7 @@ BOARD_USE_SKIA_LCDTEXT := true
 
 TARGET_PROVIDES_LIBLIGHTS := true
 
-#BOARD_PROVIDES_LIBRIL := true
+BOARD_PROVIDES_LIBRIL := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.hardware=ruby
 BOARD_KERNEL_BASE := 0x48000000
