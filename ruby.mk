@@ -62,7 +62,9 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/prebuilt/root/init.qcom.sh:root/init.qcom.sh \
     device/htc/ruby/prebuilt/root/init.ruby.rc:root/init.ruby.rc \
     device/htc/ruby/prebuilt/root/init.ruby.usb.rc:root/init.ruby.usb.rc \
-    device/htc/ruby/prebuilt/root/ueventd.ruby.rc:root/ueventd.ruby.rc
+    device/htc/ruby/prebuilt/root/ueventd.ruby.rc:root/ueventd.ruby.rc \
+    device/htc/ruby/prebuilt/root/init.rc:root/init.rc 
+
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
