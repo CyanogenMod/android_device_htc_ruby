@@ -5,6 +5,7 @@ etc/vpimg
 # Executable files
 bin/akmd
 bin/awb_camera
+bin/calibrator
 bin/charging
 bin/ewtzmud
 bin/htcbatt
@@ -14,11 +15,14 @@ bin/mpdecision
 bin/netmgrd
 bin/netsharing
 bin/port-bridge
+bin/qcks
 bin/qmiproxy
 bin/qmuxd
 bin/rmt_storage
 bin/thermald
+bin/uimqc
 bin/zchgd
+xbin/wireless_modem
 
 # Audio
 lib/libacdbloader.so
