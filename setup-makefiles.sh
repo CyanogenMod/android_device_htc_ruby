@@ -1,5 +1,5 @@
 VENDOR=htc
-DEVICE=pyramid
+DEVICE=ruby
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

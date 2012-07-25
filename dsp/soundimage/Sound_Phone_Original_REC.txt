@@ -29,7 +29,7 @@ w 30 01 08 # Power Configuration Register
 w 30 02 21 # LDO Control Register
 w 30 47 31 # Analog Input Quick Charging Configuration Register
 w 30 7b 01 # Reference Power-up Configuration Register
-w 30 0a 33 # Common Mode Control Register
+w 30 0a 3b # Common Mode Control Register
 w 30 00 00 # Page Select Register
 w 30 04 03 # Clock Setting Register 1, Multiplexers
 w 30 05 91 # Clock Setting Register 2, PLL P&R Values
@@ -399,9 +399,9 @@ w 30 1c 7f # C5 (23:16) ADC Buffer A
 w 30 1d ff # C5 (15:8) ADC Buffer A
 w 30 1e ac # C5 (7:0) ADC Buffer A
 w 30 1f 00 # C5 Reserved
-w 30 20 66 # C6 (23:16) ADC Buffer A
-w 30 21 66 # C6 (15:8) ADC Buffer A
-w 30 22 66 # C6 (7:0) ADC Buffer A
+w 30 20 59 # C6 (23:16) ADC Buffer A
+w 30 21 99 # C6 (15:8) ADC Buffer A
+w 30 22 99 # C6 (7:0) ADC Buffer A
 w 30 23 00 # C6 Reserved
 w 30 24 ff # C7 (23:16) ADC Buffer A
 w 30 25 ff # C7 (15:8) ADC Buffer A
@@ -4083,8 +4083,8 @@ w 30 39 00 # ADC miniDSP instruction
 w 30 3a 00 # ADC miniDSP instruction 
 w 30 3b 00 # ADC miniDSP instruction 
 w 30 3c 30 # ADC miniDSP instruction 
-w 30 3d 14 # ADC miniDSP instruction 
-w 30 3e 9e # ADC miniDSP instruction 
+w 30 3d 18 # ADC miniDSP instruction 
+w 30 3e 9f # ADC miniDSP instruction 
 w 30 3f 00 # ADC miniDSP instruction 
 w 30 40 00 # ADC miniDSP instruction 
 w 30 41 00 # ADC miniDSP instruction 
@@ -4095,12 +4095,12 @@ w 30 45 00 # ADC miniDSP instruction
 w 30 46 00 # ADC miniDSP instruction 
 w 30 47 00 # ADC miniDSP instruction 
 w 30 48 20 # ADC miniDSP instruction 
-w 30 49 01 # ADC miniDSP instruction 
+w 30 49 05 # ADC miniDSP instruction 
 w 30 4a 20 # ADC miniDSP instruction 
 w 30 4b 00 # ADC miniDSP instruction 
 w 30 4c 30 # ADC miniDSP instruction 
-w 30 4d 18 # ADC miniDSP instruction 
-w 30 4e 9f # ADC miniDSP instruction 
+w 30 4d 14 # ADC miniDSP instruction 
+w 30 4e 9e # ADC miniDSP instruction 
 w 30 4f 00 # ADC miniDSP instruction 
 w 30 50 00 # ADC miniDSP instruction 
 w 30 51 00 # ADC miniDSP instruction 
@@ -4111,7 +4111,7 @@ w 30 55 00 # ADC miniDSP instruction
 w 30 56 00 # ADC miniDSP instruction 
 w 30 57 00 # ADC miniDSP instruction 
 w 30 58 20 # ADC miniDSP instruction 
-w 30 59 05 # ADC miniDSP instruction 
+w 30 59 01 # ADC miniDSP instruction 
 w 30 5a 21 # ADC miniDSP instruction 
 w 30 5b 00 # ADC miniDSP instruction 
 w 30 5c 30 # ADC miniDSP instruction 
@@ -4552,11 +4552,11 @@ w 30 2a fe # ADC miniDSP instruction
 w 30 2b 00 # ADC miniDSP instruction 
 w 30 2c 10 # ADC miniDSP instruction 
 w 30 2d 11 # ADC miniDSP instruction 
-w 30 2e 20 # ADC miniDSP instruction 
+w 30 2e 21 # ADC miniDSP instruction 
 w 30 2f 00 # ADC miniDSP instruction 
 w 30 30 10 # ADC miniDSP instruction 
 w 30 31 15 # ADC miniDSP instruction 
-w 30 32 21 # ADC miniDSP instruction 
+w 30 32 20 # ADC miniDSP instruction 
 w 30 33 00 # ADC miniDSP instruction 
 w 30 34 08 # ADC miniDSP instruction 
 w 30 35 00 # ADC miniDSP instruction 
@@ -4575,9 +4575,9 @@ w 30 41 03 # ADC miniDSP instruction
 w 30 42 ff # ADC miniDSP instruction 
 w 30 43 00 # ADC miniDSP instruction 
 w 30 00 2c # Page Select Register
-w 30 08 46 # C0 (23:16) DAC Buffer A
-w 30 09 66 # C0 (15:8) DAC Buffer A
-w 30 0a 66 # C0 (7:0) DAC Buffer A
+w 30 08 50 # C0 (23:16) DAC Buffer A
+w 30 09 a3 # C0 (15:8) DAC Buffer A
+w 30 0a d7 # C0 (7:0) DAC Buffer A
 w 30 0b 00 # C0 Reserved
 w 30 0c 7f # C1 (23:16) DAC Buffer A
 w 30 0d fc # C1 (15:8) DAC Buffer A
@@ -6402,37 +6402,37 @@ w 30 48 f3 # C196 (23:16) DAC Buffer B
 w 30 49 33 # C196 (15:8) DAC Buffer B
 w 30 4a 33 # C196 (7:0) DAC Buffer B
 w 30 4b 00 # C196 Reserved
-w 30 4c 33 # C197 (23:16) DAC Buffer B
-w 30 4d 33 # C197 (15:8) DAC Buffer B
-w 30 4e 33 # C197 (7:0) DAC Buffer B
+w 30 4c 19 # C197 (23:16) DAC Buffer B
+w 30 4d 99 # C197 (15:8) DAC Buffer B
+w 30 4e 99 # C197 (7:0) DAC Buffer B
 w 30 4f 00 # C197 Reserved
-w 30 50 66 # C198 (23:16) DAC Buffer B
-w 30 51 66 # C198 (15:8) DAC Buffer B
-w 30 52 66 # C198 (7:0) DAC Buffer B
+w 30 50 4c # C198 (23:16) DAC Buffer B
+w 30 51 cc # C198 (15:8) DAC Buffer B
+w 30 52 cc # C198 (7:0) DAC Buffer B
 w 30 53 00 # C198 Reserved
 w 30 54 33 # C199 (23:16) DAC Buffer B
 w 30 55 33 # C199 (15:8) DAC Buffer B
 w 30 56 33 # C199 (7:0) DAC Buffer B
 w 30 57 00 # C199 Reserved
 w 30 58 00 # C200 (23:16) DAC Buffer B
-w 30 59 00 # C200 (15:8) DAC Buffer B
-w 30 5a 94 # C200 (7:0) DAC Buffer B
+w 30 59 03 # C200 (15:8) DAC Buffer B
+w 30 5a ec # C200 (7:0) DAC Buffer B
 w 30 5b 00 # C200 Reserved
 w 30 5c 00 # C201 (23:16) DAC Buffer B
-w 30 5d 00 # C201 (15:8) DAC Buffer B
-w 30 5e ea # C201 (7:0) DAC Buffer B
+w 30 5d 06 # C201 (15:8) DAC Buffer B
+w 30 5e 37 # C201 (7:0) DAC Buffer B
 w 30 5f 00 # C201 Reserved
 w 30 60 00 # C202 (23:16) DAC Buffer B
-w 30 61 01 # C202 (15:8) DAC Buffer B
-w 30 62 73 # C202 (7:0) DAC Buffer B
+w 30 61 09 # C202 (15:8) DAC Buffer B
+w 30 62 d9 # C202 (7:0) DAC Buffer B
 w 30 63 00 # C202 Reserved
-w 30 64 6c # C203 (23:16) DAC Buffer B
-w 30 65 cc # C203 (15:8) DAC Buffer B
-w 30 66 cd # C203 (7:0) DAC Buffer B
+w 30 64 6e # C203 (23:16) DAC Buffer B
+w 30 65 14 # C203 (15:8) DAC Buffer B
+w 30 66 7a # C203 (7:0) DAC Buffer B
 w 30 67 00 # C203 Reserved
-w 30 68 13 # C204 (23:16) DAC Buffer B
-w 30 69 33 # C204 (15:8) DAC Buffer B
-w 30 6a 33 # C204 (7:0) DAC Buffer B
+w 30 68 11 # C204 (23:16) DAC Buffer B
+w 30 69 eb # C204 (15:8) DAC Buffer B
+w 30 6a 86 # C204 (7:0) DAC Buffer B
 w 30 6b 00 # C204 Reserved
 w 30 6c 40 # C205 (23:16) DAC Buffer B
 w 30 6d 00 # C205 (15:8) DAC Buffer B
@@ -10263,7 +10263,7 @@ w 30 4d 00 # DAC miniDSP instruction
 w 30 4e 00 # DAC miniDSP instruction 
 w 30 4f 00 # DAC miniDSP instruction 
 w 30 50 20 # DAC miniDSP instruction 
-w 30 51 09 # DAC miniDSP instruction 
+w 30 51 01 # DAC miniDSP instruction 
 w 30 52 7d # DAC miniDSP instruction 
 w 30 53 00 # DAC miniDSP instruction 
 w 30 54 30 # DAC miniDSP instruction 
