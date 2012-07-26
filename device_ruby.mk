@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/ruby/keychars/ruby-keypad.kcm:system/usr/keychars/ruby-keypad.kcm
+    device/htc/ruby/keychars/ruby-keypad.kcm:system/usr/keychars/ruby-keypad.kcm \
     device/htc/ruby/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
     device/htc/ruby/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/ruby/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
