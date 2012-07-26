@@ -40,10 +40,10 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
 # Ramdisk files
 PRODUCT_COPY_FILES += \
-    device/htc/ruby/prebuilt/root/init.qcom.sh:root/init.qcom.sh \
-    device/htc/ruby/prebuilt/root/init.ruby.rc:root/init.ruby.rc \
-    device/htc/ruby/prebuilt/root/init.ruby.usb.rc:root/init.ruby.usb.rc \
-    device/htc/ruby/prebuilt/root/ueventd.ruby.rc:root/ueventd.ruby.rc
+    device/htc/ruby/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/htc/ruby/ramdisk/init.ruby.rc:root/init.ruby.rc \
+    device/htc/ruby/ramdisk/init.ruby.usb.rc:root/init.ruby.usb.rc \
+    device/htc/ruby/ramdisk/ueventd.ruby.rc:root/ueventd.ruby.rc
 
 # QCOM scripts
 PRODUCT_COPY_FILES += \
