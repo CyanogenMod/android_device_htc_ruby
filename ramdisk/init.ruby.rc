@@ -1,16 +1,19 @@
 import init.ruby.usb.rc
 
 on early-init
-    export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
-    # for backwards compatibility
     symlink /mnt/sdcard /sdcard
-    symlink /mnt/sdcard/ext_sd /sdcard2
+
+    mkdir /mnt/emmc 0000 system system
+    symlink /mnt/emmc /emmc
+
+    export EXTERNAL_STORAGE /mnt/emmc
+    export SECONDARY_STORAGE /mnt/sdcard
 
 on init
     mkdir /system
     mkdir /data 0771 system system
-    mkdir /cache 0771 system cache
+    mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
 
 on emmc-fs
@@ -21,14 +24,14 @@ on emmc-fs
     mkdir /vendor/firmware/adsp 0771 system system
     mkdir /vendor/firmware/misc_mdm 0771 system system
 
-    mount ext4 /dev/block/mmcblk0p10 /system wait ro data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p10 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p10 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p10 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p29 /system wait ro data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p31 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p30 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p32 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
-    mount vfat /dev/block/mmcblk0p10 /vendor/firmware/adsp wait ro shortname=lower
-    mount vfat /dev/block/mmcblk0p10 /vendor/firmware/misc wait ro shortname=lower
-    mount vfat /dev/block/mmcblk0p10 /vendor/firmware/misc_mdm wait ro shortname=lower
+    mount vfat /dev/block/mmcblk0p21 /vendor/firmware/adsp wait ro shortname=lower
+    mount vfat /dev/block/mmcblk0p17 /vendor/firmware/misc wait ro shortname=lower
+    mount vfat /dev/block/mmcblk0p18 /vendor/firmware/misc_mdm wait ro shortname=lower
 
     symlink /vendor/firmware/adsp/q6.b07 /vendor/firmware/q6.b07
     symlink /vendor/firmware/adsp/q6.b06 /vendor/firmware/q6.b06
@@ -84,7 +87,7 @@ on boot
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
-    chown wifi wifi /system/etc/firmware/ti-connectivity/*
+    chown wifi wifi /system/etc/firmware/ti-connectivity
     chown wifi wifi /system/etc/wifi/wpa_supplicant.conf
     chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
     chown wifi wifi /data/misc/wifi/p2p_supplicant.conf
@@ -187,6 +190,7 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp --single_core_wh
     disabled
 
 service netmgrd /system/bin/netmgrd
+    class main
 
 service p2p_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c/data/misc/wifi/p2p_supplicant.conf -dt
     socket wpa_p2p_wlan0:0 dgram 660 wifi wifi
@@ -199,6 +203,7 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     disabled
 
 service qmuxd /system/bin/qmuxd
+    class main
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 NULL NULL /dev/block/mmcblk0p27 /dev/block/mmcblk0p28 /dev/block/mmcblk0p20
     class core
