@@ -110,6 +110,36 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/ruby/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+## recovery and custom charging
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/recovery/root/sbin/choice_fn:recovery/root/sbin/choice_fn \
+    device/htc/ruby/recovery/root/sbin/power_test:recovery/root/sbin/power_test \
+    device/htc/ruby/recovery/root/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
+    device/htc/ruby/recovery/root/sbin/detect_key:recovery/root/sbin/detect_key \
+    device/htc/ruby/recovery/root/sbin/htcbatt:recovery/root/sbin/htcbatt
+
+# Device Specific Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/firmware/default_bak.acdb:system/etc/firmware/default_bak.acdb \
+    device/htc/ruby/firmware/default_rogers_bak.acdb:system/etc/firmware/default_rogers_bak.acdb
+
+# wifi firmware
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/wifi/firmware.bin:system/etc/wifi/firmware.bin \
+    device/htc/ruby/wifi/firmware_ap.bin:system/etc/wifi/firmware_ap.bin \
+    device/htc/ruby/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
+    device/htc/ruby/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
+    device/htc/ruby/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
+    device/htc/ruby/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/htc/ruby/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \
+    device/htc/ruby/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \
+    device/htc/ruby/firmware/htc_1271fw.bin:system/etc/firmware/htc_1271fw.bin \
+    device/htc/ruby/firmware/htc_1271fw_196_header.bin:system/etc/firmware/htc_1271fw_196_header.bin \
+    device/htc/ruby/firmware/TIInit_7.6.15.bts:system/etc/firmware/TIInit_7.6.15.bts \
+    device/htc/ruby/firmware/WL127x_2.0_2.25.bts:system/etc/firmware/WL127x_2.0_2.25.bts \
+    device/htc/ruby/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
+    device/htc/ruby/firmware/version:system/etc/firmware/version
+
 # misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
