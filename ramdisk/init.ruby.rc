@@ -123,9 +123,6 @@ on boot
     # for RIL to notify battery driver talking and network_search state
     chown radio radio /sys/class/power_supply/battery/phone_call
 
-    # Load kineto_gan.ko while booting
-    insmod /system/lib/modules/kineto_gan.ko
-
 # Services start here
 
 service akmd /system/bin/akmd
