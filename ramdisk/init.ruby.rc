@@ -132,6 +132,12 @@ service akmd /system/bin/akmd
     user compass
     group compass misc input
 
+service charging /system/bin/charging
+    user root
+    group root
+    disabled
+    oneshot
+
 service chmod_nvs_wlan0 /system/bin/chmod 644 /data/misc/wifi/wl1271-nvs-calibrated.bin
     class core
     user root
