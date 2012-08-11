@@ -126,6 +126,7 @@ on boot
 # Services start here
 
 service akmd /system/bin/akmd
+    class core
     user compass
     group compass misc input
 
@@ -151,6 +152,7 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
     disabled
 
 service ewtzmud /system/bin/ewtzmud
+    class core
     user system
     group system misc input
 
@@ -163,6 +165,7 @@ service hostapd_bin /system/bin/hostapd -d /data/misc/wifi/hostapd.conf
     disabled
 
 service htcbatt /system/bin/htcbatt
+    class core
     user root
 
 service initial_regdom /system/bin/initial_regdom.sh
