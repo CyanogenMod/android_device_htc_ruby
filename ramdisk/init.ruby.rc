@@ -18,10 +18,11 @@ on init
 
 on emmc-fs
     # msm8x60 firmware
-    mkdir /vendor               0771 system system
-    mkdir /vendor/firmware      0771 system system
-    mkdir /vendor/firmware/misc 0771 system system
+    rm /vendor
+    mkdir /vendor 0771 system system
+    mkdir /vendor/firmware 0771 system system
     mkdir /vendor/firmware/adsp 0771 system system
+    mkdir /vendor/firmware/misc 0771 system system
     mkdir /vendor/firmware/misc_mdm 0771 system system
 
     mount ext4 /dev/block/mmcblk0p29 /system wait ro data=ordered noauto_da_alloc
@@ -64,12 +65,14 @@ on emmc-fs
     symlink /vendor/firmware/misc_mdm/image/amss.mbn /vendor/firmware/amss.mbn
     symlink /vendor/firmware/misc_mdm/image/htcssmem.mbn /vendor/firmware/htcssmem.mbn
 
+    # Force loading of modem and Q6 images
+    write /dev/smd_pkt_loopback 1
+
 on post-fs
     mkdir /data/qcks 0770 system system
 
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_done 1
-
 
 on boot
     # Radio
@@ -181,9 +184,7 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
 
 service kickstart /system/bin/qcks l
-    oneshot
-
-service load-modem /system/bin/load-modem.sh
+    class main
     oneshot
 
 service modem /system/xbin/wireless_modem
