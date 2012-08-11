@@ -78,7 +78,6 @@ lib/hw/nfc.ruby.so
 vendor/firmware/libpn544_fw.so
 
 # Radio
-lib/libhtc_ril.so
 lib/libnetmgr.so
 lib/libnv.so
 lib/libqc-opt.so
