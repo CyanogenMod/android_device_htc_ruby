@@ -125,12 +125,10 @@ PRODUCT_COPY_FILES += \
 
 # wifi firmware
 PRODUCT_COPY_FILES += \
-    device/htc/ruby/wifi/firmware.bin:system/etc/wifi/firmware.bin \
-    device/htc/ruby/wifi/firmware_ap.bin:system/etc/wifi/firmware_ap.bin \
-    device/htc/ruby/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
-    device/htc/ruby/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
-    device/htc/ruby/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
-    device/htc/ruby/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-plt.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-sr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl1271-nvs.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin \
     device/htc/ruby/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \
     device/htc/ruby/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \
     device/htc/ruby/firmware/htc_1271fw.bin:system/etc/firmware/htc_1271fw.bin \
@@ -139,10 +137,12 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/firmware/WL127x_2.0_2.25.bts:system/etc/firmware/WL127x_2.0_2.25.bts \
     device/htc/ruby/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
     device/htc/ruby/firmware/version:system/etc/firmware/version \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-plt.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-sr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl1271-nvs.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin
+    device/htc/ruby/wifi/firmware.bin:system/etc/wifi/firmware.bin \
+    device/htc/ruby/wifi/firmware_ap.bin:system/etc/wifi/firmware_ap.bin \
+    device/htc/ruby/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
+    device/htc/ruby/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
+    device/htc/ruby/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
+    device/htc/ruby/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # misc
 PRODUCT_PROPERTY_OVERRIDES += \
