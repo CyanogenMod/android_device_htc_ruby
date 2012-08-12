@@ -138,7 +138,11 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/firmware/TIInit_7.6.15.bts:system/etc/firmware/TIInit_7.6.15.bts \
     device/htc/ruby/firmware/WL127x_2.0_2.25.bts:system/etc/firmware/WL127x_2.0_2.25.bts \
     device/htc/ruby/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
-    device/htc/ruby/firmware/version:system/etc/firmware/version
+    device/htc/ruby/firmware/version:system/etc/firmware/version \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-plt.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-sr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl1271-nvs.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin
 
 # misc
 PRODUCT_PROPERTY_OVERRIDES += \
