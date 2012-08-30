@@ -27,6 +27,9 @@ PRODUCT_PACKAGES += \
     gps.ruby \
     lights.ruby
 
+## The gps config appropriate for this device
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
+
 # NFC
 PRODUCT_PACKAGES += \
     libnfc \
@@ -35,11 +38,9 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# US GPS config
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
-
 # Ramdisk files
 PRODUCT_COPY_FILES += \
+    device/htc/ruby/ramdisk/fstab.ruby:root/fstab.ruby \
     device/htc/ruby/ramdisk/init.qcom.sh:root/init.qcom.sh \
     device/htc/ruby/ramdisk/init.ruby.rc:root/init.ruby.rc \
     device/htc/ruby/ramdisk/init.ruby.usb.rc:root/init.ruby.usb.rc \
@@ -52,6 +53,14 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     device/htc/ruby/configs/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     device/htc/ruby/configs/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+
+    ## recovery and custom charging
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/recovery/root/sbin/choice_fn:recovery/root/sbin/choice_fn \
+    device/htc/ruby/recovery/root/sbin/power_test:recovery/root/sbin/power_test \
+    device/htc/ruby/recovery/root/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
+    device/htc/ruby/recovery/root/sbin/detect_key:recovery/root/sbin/detect_key \
+    device/htc/ruby/recovery/root/sbin/htcbatt:recovery/root/sbin/htcbatt
 
 # Vold
 PRODUCT_COPY_FILES += \
@@ -101,22 +110,15 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/base/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
 # Custom media config for HTC camera
 PRODUCT_COPY_FILES += \
+    device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/ruby/configs/media_profiles.xml:system/etc/media_profiles.xml
-
-## recovery and custom charging
-PRODUCT_COPY_FILES += \
-    device/htc/ruby/recovery/root/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    device/htc/ruby/recovery/root/sbin/power_test:recovery/root/sbin/power_test \
-    device/htc/ruby/recovery/root/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
-    device/htc/ruby/recovery/root/sbin/detect_key:recovery/root/sbin/detect_key \
-    device/htc/ruby/recovery/root/sbin/htcbatt:recovery/root/sbin/htcbatt
 
 # Device Specific Firmware
 PRODUCT_COPY_FILES += \
@@ -166,4 +168,4 @@ $(call inherit-product-if-exists, vendor/htc/ruby/ruby-vendor.mk)# media profile
 $(call inherit-product, device/htc/ruby/media_a1026.mk)
 $(call inherit-product, device/htc/ruby/media_htcaudio.mk)
 
-$(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
