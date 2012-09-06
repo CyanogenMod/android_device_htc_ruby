@@ -22,7 +22,7 @@
 /dev/video*	              0660   system     camera
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     qcom_diag
+/dev/diag                 0666   root     root
 # HTC diag
 /dev/btdiag               0660   radio      radio
 /dev/diag_arm9            0660   radio      radio
