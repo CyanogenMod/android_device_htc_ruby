@@ -88,7 +88,6 @@ lib/libqdp.so
 lib/libqmi.so
 lib/libqmiservices.so
 lib/libqueue.so
-lib/libril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 
