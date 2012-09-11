@@ -59,8 +59,6 @@ on early-init
     symlink /vendor/firmware/misc_mdm/image/amss.mbn /vendor/firmware/amss.mbn
     symlink /vendor/firmware/misc_mdm/image/htcssmem.mbn /vendor/firmware/htcssmem.mbn
 
-    # Force loading of modem and Q6 images
-    write /dev/smd_pkt_loopback 1
 
 on init
     mkdir /system
@@ -188,6 +186,9 @@ on boot
     # sync fs
     chown system /sys/devices/platform/rs300000a7.65536/force_sync
     chown system /sys/devices/platform/rs300000a7.65536/sync_sts
+    
+    # Force loading of modem and Q6 images
+    write /dev/smd_pkt_loopback 1
 
 # Services start here
 
@@ -261,13 +262,6 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp --single_core_wh
 service netmgrd /system/bin/netmgrd
     class main
 
-service ril-daemon /system/bin/rild
-    class main
-    socket rild stream 660 root radio
-    socket rild-debug stream 660 radio system
-    user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log
-
 service p2p_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf
     user root
     group wifi inet
@@ -282,6 +276,8 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
 
 service qmuxd /system/bin/qmuxd
     class main
+    user radio
+    group radio
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 NULL NULL /dev/block/mmcblk0p27 /dev/block/mmcblk0p28 /dev/block/mmcblk0p20
     class core
