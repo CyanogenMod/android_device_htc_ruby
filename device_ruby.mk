@@ -38,6 +38,27 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# wifi firmware
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-plt.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-sr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
+    device/htc/ruby/firmware/ti-connectivity/wl1271-nvs.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin \
+    device/htc/ruby/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \
+    device/htc/ruby/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \
+    device/htc/ruby/firmware/htc_1271fw.bin:system/etc/firmware/htc_1271fw.bin \
+    device/htc/ruby/firmware/htc_1271fw_196_header.bin:system/etc/firmware/htc_1271fw_196_header.bin \
+    device/htc/ruby/firmware/TIInit_7.6.15.bts:system/etc/firmware/TIInit_7.6.15.bts \
+    device/htc/ruby/firmware/WL127x_2.0_2.25.bts:system/etc/firmware/WL127x_2.0_2.25.bts \
+    device/htc/ruby/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
+    device/htc/ruby/firmware/version:system/etc/firmware/version \
+    device/htc/ruby/wifi/firmware.bin:system/etc/wifi/firmware.bin \
+    device/htc/ruby/wifi/firmware_ap.bin:system/etc/wifi/firmware_ap.bin \
+    device/htc/ruby/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
+    device/htc/ruby/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
+    device/htc/ruby/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
+    device/htc/ruby/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
 # Ramdisk files
 PRODUCT_COPY_FILES += \
     device/htc/ruby/ramdisk/fstab.ruby:root/fstab.ruby \
@@ -76,9 +97,9 @@ PRODUCT_COPY_FILES += device/htc/ruby/configs/thermald.conf:system/etc/thermald.
 
 # Sound configs
 PRODUCT_COPY_FILES += \
+    device/htc/ruby/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     device/htc/ruby/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
     device/htc/ruby/dsp/AIC3254_REG_DualMic_XD.csv:system/etc/AIC3254_REG_DualMic_XD.csv \
-    device/htc/ruby/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     device/htc/ruby/dsp/AudioBTID.csv:system/etc/AudioBTID.csv \
     device/htc/ruby/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
     device/htc/ruby/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
@@ -112,31 +133,10 @@ PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/ruby/configs/media_profiles.xml:system/etc/media_profiles.xml
 
-# Device Specific Firmware
+# acdb config
 PRODUCT_COPY_FILES += \
     device/htc/ruby/firmware/default_bak.acdb:system/etc/firmware/default_bak.acdb \
     device/htc/ruby/firmware/default_rogers_bak.acdb:system/etc/firmware/default_rogers_bak.acdb
-
-# wifi firmware
-PRODUCT_COPY_FILES += \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-plt.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-sr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl1271-nvs.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin \
-    device/htc/ruby/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \
-    device/htc/ruby/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \
-    device/htc/ruby/firmware/htc_1271fw.bin:system/etc/firmware/htc_1271fw.bin \
-    device/htc/ruby/firmware/htc_1271fw_196_header.bin:system/etc/firmware/htc_1271fw_196_header.bin \
-    device/htc/ruby/firmware/TIInit_7.6.15.bts:system/etc/firmware/TIInit_7.6.15.bts \
-    device/htc/ruby/firmware/WL127x_2.0_2.25.bts:system/etc/firmware/WL127x_2.0_2.25.bts \
-    device/htc/ruby/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
-    device/htc/ruby/firmware/version:system/etc/firmware/version \
-    device/htc/ruby/wifi/firmware.bin:system/etc/wifi/firmware.bin \
-    device/htc/ruby/wifi/firmware_ap.bin:system/etc/wifi/firmware_ap.bin \
-    device/htc/ruby/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
-    device/htc/ruby/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
-    device/htc/ruby/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
-    device/htc/ruby/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -154,7 +154,7 @@ PRODUCT_COPY_FILES += $(shell \
 endif
 
 # call proprietary setup
-$(call inherit-product-if-exists, vendor/htc/ruby/ruby-vendor.mk)# media profiles and capabilities spec
+$(call inherit-product-if-exists, vendor/htc/ruby/ruby-vendor.mk)
 
 # htc audio settings
 $(call inherit-product, device/htc/ruby/media_a1026.mk)

@@ -67,7 +67,6 @@ lib/libOpenVG.so
 lib/libsc-a2xx.so
 
 # Misc libraries
-lib/libdiag.so
 lib/libdsm.so
 
 lib/libmm-color-convertor.so
@@ -79,6 +78,7 @@ lib/hw/nfc.ruby.so
 vendor/firmware/libpn544_fw.so
 
 # Radio
+lib/libdiag.so
 lib/libdsi_netctrl.so
 lib/libdsutils.so
 lib/libnetmgr.so
