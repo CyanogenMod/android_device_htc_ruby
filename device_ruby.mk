@@ -92,9 +92,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
     device/htc/ruby/idc/ruby-keypad.idc:system/usr/idc/ruby-keypad.idc
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/ruby/configs/thermald.conf:system/etc/thermald.conf
-
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/ruby/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
@@ -131,7 +128,7 @@ PRODUCT_COPY_FILES += \
 # Custom media config for HTC camera
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/ruby/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/msm8660-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # acdb config
 PRODUCT_COPY_FILES += \
