@@ -46,15 +46,7 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/ramdisk/init.ruby.usb.rc:root/init.ruby.usb.rc \
     device/htc/ruby/ramdisk/ueventd.ruby.rc:root/ueventd.ruby.rc
 
-# QCOM scripts
-PRODUCT_COPY_FILES += \
-    device/htc/ruby/configs/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    device/htc/ruby/configs/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
-    device/htc/ruby/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
-    device/htc/ruby/configs/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
-    device/htc/ruby/configs/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
-
-    ## recovery and custom charging
+# recovery and custom charging
 PRODUCT_COPY_FILES += \
     device/htc/ruby/recovery/root/sbin/choice_fn:recovery/root/sbin/choice_fn \
     device/htc/ruby/recovery/root/sbin/power_test:recovery/root/sbin/power_test \
