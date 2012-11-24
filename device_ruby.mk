@@ -158,3 +158,10 @@ $(call inherit-product, device/htc/ruby/media_a1026.mk)
 $(call inherit-product, device/htc/ruby/media_htcaudio.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# Discard inherited values and use our own instead.
+PRODUCT_DEVICE := ruby
+PRODUCT_NAME := ruby
+PRODUCT_BRAND := htc
+PRODUCT_MODE := Amaze 4G
+PRODUCT_MANUFACTURER := HTC
