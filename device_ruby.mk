@@ -142,14 +142,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y
 
-# Kernel modules
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-PRODUCT_COPY_FILES += $(shell \
-    find device/htc/ruby/modules -name '*.ko' \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-    | tr '\n' ' ')
-endif
-
 # call proprietary setup
 $(call inherit-product-if-exists, vendor/htc/ruby/ruby-vendor.mk)
 

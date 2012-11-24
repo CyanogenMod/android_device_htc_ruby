@@ -37,7 +37,6 @@ BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL3 androidboot.hardware=ruby no_console_suspend=1
 BOARD_KERNEL_PAGE_SIZE := 2048
 TARGET_KERNEL_CONFIG := ruby_defconfig
-TARGET_PREBUILT_KERNEL := device/htc/ruby/prebuilt/kernel
 
 # Wifi
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
