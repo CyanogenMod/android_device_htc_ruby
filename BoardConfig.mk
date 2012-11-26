@@ -38,6 +38,9 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL3 androidboot.hardware=ruby no_console_sus
 BOARD_KERNEL_PAGE_SIZE := 2048
 TARGET_KERNEL_CONFIG := ruby_defconfig
 
+# Use libril in the device tree
+BOARD_PROVIDES_LIBRIL := true
+
 # Wifi
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
