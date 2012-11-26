@@ -1588,6 +1588,8 @@ static int responseDataCallListV4(Parcel &p, void *response, size_t responselen)
         writeStringToParcel(p, p_cur[i].type);
         // apn is not used, so don't send.
         writeStringToParcel(p, p_cur[i].address);
+        // inactive_reason is an HTC filler field
+        // unknown_field is an HTC filler field
         appendPrintBuf("%s[cid=%d,%s,%s,%s],", printBuf,
             p_cur[i].cid,
             (p_cur[i].active==0)?"down":"up",

@@ -194,6 +194,8 @@ typedef struct {
                                    For example, "IP", "IPV6", "IPV4V6", or "PPP". */
     char *          apn;        /* ignored */
     char *          address;    /* An address, e.g., "192.0.1.3" or "2001:db8::1". */
+    int             inactive_reason; /* HTC added filler field */
+    int             unknown_field; /* HTC added filler field */
 } RIL_Data_Call_Response_v4;
 
 /*
