@@ -113,6 +113,9 @@
     <!-- Default blink frequency for notification LED is 2 seconds. -->
     <integer name="config_defaultNotificationLedOff">2000</integer>
 
+    <!-- The default iface on which to monitor data use -->
+    <string name="config_datause_iface">rmnet_sdio0</string>
+
     <!-- This string array should be overridden by the device to present a list of
          network attributes.  This is used by the connectivity manager to decide
          which networks can coexist based on the hardware -->
