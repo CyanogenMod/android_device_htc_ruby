@@ -2001,7 +2001,8 @@ static int responseRilSignalStrength(Parcel &p,
         RIL_SignalStrength_HTC *p_cur = ((RIL_SignalStrength_HTC *) response);
 
         p.writeInt32(p_cur->GW_SignalStrength.signalStrength);
-        p.writeInt32(p_cur->GW_SignalStrength.bitErrorRate);
+        /* For some reason bitErrorRate is stuck at 255 */
+        p.writeInt32(0);
         p.writeInt32(p_cur->CDMA_SignalStrength.dbm);
         p.writeInt32(p_cur->CDMA_SignalStrength.ecio);
         p.writeInt32(p_cur->EVDO_SignalStrength.dbm);
@@ -2009,7 +2010,12 @@ static int responseRilSignalStrength(Parcel &p,
         p.writeInt32(p_cur->EVDO_SignalStrength.signalNoiseRatio);
         p.writeInt32(p_cur->ATT_SignalStrength.dbm);
         p.writeInt32(p_cur->ATT_SignalStrength.ecno);
-        p.writeInt32(p_cur->LTE_SignalStrength.signalStrength);
+        /* LTE signal strength of 99 means LTE disabled */
+        if (p_cur->LTE_SignalStrength.signalStrength == 99) {
+            p.writeInt32(-1);
+        } else {
+            p.writeInt32(p_cur->LTE_SignalStrength.signalStrength);
+        }
         p.writeInt32(p_cur->LTE_SignalStrength.rsrp);
         p.writeInt32(p_cur->LTE_SignalStrength.rsrq);
         p.writeInt32(p_cur->LTE_SignalStrength.rssnr);
