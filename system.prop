@@ -13,8 +13,6 @@ ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 # wifi
 wifi.interface=wlan0
-wifi.softap.interface=wlan1
-wifi.softapconcurrent.interface=wlan1
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
