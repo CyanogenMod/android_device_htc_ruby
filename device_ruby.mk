@@ -92,6 +92,10 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
     device/htc/ruby/idc/ruby-keypad.idc:system/usr/idc/ruby-keypad.idc
 
+# QC thermald config
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/configs/thermald.conf:system/etc/thermald.conf
+
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/ruby/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
