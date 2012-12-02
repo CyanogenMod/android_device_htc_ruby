@@ -26,9 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/ruby/overlay
 PRODUCT_PACKAGES += \
     gps.ruby
 
-## The gps config appropriate for this device
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
-
 # NFC
 PRODUCT_PACKAGES += \
     libnfc \
