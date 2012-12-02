@@ -27,8 +27,6 @@
 # inherit from msm8660-common
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/htc/ruby/include
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := ruby
 
