@@ -34,6 +34,15 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# Wifi
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd.conf \
+    wpa_supplicant.conf \
+    tiwlan.ini \
+    TQS_D_1.7.ini \
+    TQS_D_1.7_127x.ini
+
 # wifi firmware
 PRODUCT_COPY_FILES += \
     device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
@@ -48,12 +57,8 @@ PRODUCT_COPY_FILES += \
     device/htc/ruby/firmware/WL127x_2.0_2.25.bts:system/etc/firmware/WL127x_2.0_2.25.bts \
     device/htc/ruby/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
     device/htc/ruby/firmware/version:system/etc/firmware/version \
-    device/htc/ruby/wifi/firmware.bin:system/etc/wifi/firmware.bin \
-    device/htc/ruby/wifi/firmware_ap.bin:system/etc/wifi/firmware_ap.bin \
-    device/htc/ruby/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
-    device/htc/ruby/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
-    device/htc/ruby/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
-    device/htc/ruby/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    device/htc/ruby/firmware/firmware.bin:system/etc/wifi/firmware.bin \
+    device/htc/ruby/firmware/firmware_ap.bin:system/etc/wifi/firmware_ap.bin
 
 # Ramdisk files
 PRODUCT_COPY_FILES += \
