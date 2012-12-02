@@ -41,7 +41,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     tiwlan.ini \
     TQS_D_1.7.ini \
-    TQS_D_1.7_127x.ini
+    TQS_D_1.7_127x.ini \
+    calibrator
 
 # wifi firmware
 PRODUCT_COPY_FILES += \
