@@ -126,11 +126,6 @@ PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/msm8660-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
-# acdb config
-PRODUCT_COPY_FILES += \
-    device/htc/ruby/firmware/default_bak.acdb:system/etc/firmware/default_bak.acdb \
-    device/htc/ruby/firmware/default_rogers_bak.acdb:system/etc/firmware/default_rogers_bak.acdb
-
 # misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
