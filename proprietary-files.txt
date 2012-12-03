@@ -5,7 +5,6 @@ etc/vpimg
 # Executable files
 bin/akmd
 bin/awb_camera
-bin/calibrator
 bin/charging
 bin/ewtzmud
 bin/htcbatt
