@@ -16,7 +16,7 @@ $(call inherit-product, device/htc/ruby/device_ruby.mk)
 PRODUCT_DEVICE := ruby
 PRODUCT_NAME := cm_ruby
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC Ruby
+PRODUCT_MODEL := HTC Amaze 4G
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name etc.
