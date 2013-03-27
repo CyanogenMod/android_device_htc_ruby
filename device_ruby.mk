@@ -48,13 +48,6 @@ PRODUCT_PACKAGES += \
     TQS_D_1.7_127x.ini \
     calibrator
 
-# wifi firmware
-PRODUCT_COPY_FILES += \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-plt.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl127x-fw-4-sr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
-    device/htc/ruby/firmware/ti-connectivity/wl1271-nvs.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin
-
 # Ramdisk files
 PRODUCT_COPY_FILES += \
     device/htc/ruby/ramdisk/fstab.ruby:root/fstab.ruby \
