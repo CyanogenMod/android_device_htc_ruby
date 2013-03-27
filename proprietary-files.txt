@@ -20,7 +20,6 @@ bin/qmiproxy
 bin/qmuxd
 bin/rmt_storage
 bin/thermald
-bin/uimqc
 bin/zchgd
 xbin/wireless_modem
 
@@ -51,6 +50,9 @@ lib/libchromatix_s5k3h2yx_default_video.so
 lib/libchromatix_s5k3h2yx_hfr.so
 lib/libchromatix_s5k3h2yx_preview.so
 lib/libchromatix_s5k3h2yx_zsl.so
+
+# Firmware
+etc/firmware/TIInit_7.6.15.bts
 
 # Graphics
 lib/egl/eglsubAndroid.so

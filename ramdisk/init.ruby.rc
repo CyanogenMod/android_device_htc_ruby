@@ -294,10 +294,10 @@ service upd_nvs_wlan0 /system/bin/calibrator set upd_nvs /system/etc/wifi/TQS_D_
     oneshot
     disabled
 
-service uim /system/bin/uimqc
+service uim /system/bin/uim-sysfs
     class core
     user root
-    group media bluetooth
+    group bluetooth net_bt_admin
     oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf
