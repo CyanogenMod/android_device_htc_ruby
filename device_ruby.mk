@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
 # Vold
 PRODUCT_COPY_FILES += \
     device/htc/ruby/vold.fstab:system/etc/vold.fstab
+    
+# APNs
+PRODUCT_COPY_FILES += \
+    device/htc/ruby/apns-conf.xml:system/etc/apns-conf.xml
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
